@@ -8,16 +8,17 @@ import curses
 def paintTetrimino(stdscr, type):
 
     # 9619 - ▓, 9609 - ▉, 9608 - █, 9611 - ▋
-    unit_ch = chr(9609)
+    # 9634 - ▢,
+    unit_ch = chr(9634)
 
     if type == 'square':
         # 2 x 2 tetrimino
         stdscr.addstr(5, 2, unit_ch)
-        stdscr.addstr(5, 3, unit_ch)
+        stdscr.addstr(5, 4, unit_ch)
         stdscr.addstr(6, 2, unit_ch)
-        stdscr.addstr(6, 3, unit_ch)
+        stdscr.addstr(6, 4, unit_ch)
     elif type == 'line':
-        for x in range(2, 6):
+        for x in range(2, 10, 2):
             stdscr.addstr(8, x, unit_ch)
 
 def tetris(stdscr):
