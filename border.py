@@ -2,13 +2,18 @@ import curses
 
 def tetris(stdscr):
 
+    curses.curs_set(0)
+
     sh, sw = stdscr.getmaxyx()
 
     # find the border for game board.
     border_ch = chr(127999)
 
+    #stdscr.addstr(1, 0, border_ch)
+    #stdscr.addstr(1, 3, border_ch)
+
     # paint the top and bottom border
-    for x in range(5, 24 + 5):
+    for x in range(5, 39 + 5, 1):
         stdscr.addstr(2, x, border_ch)
         stdscr.addstr(23, x, border_ch)
     # paint the left and right border
