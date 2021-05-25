@@ -11,6 +11,8 @@ def paintTetrimino(stdscr, type):
     # 9634 - ▢,
     unit_ch = chr(9634)
 
+    stdscr.addstr(4, 2, chr(9608))
+
     if type == 'square':
         # 2 x 2 tetrimino
         stdscr.addstr(5, 2, unit_ch)
